@@ -1,4 +1,4 @@
-const WebSocket = require("uws");
+const WebSocket = require("ws");
 const WebSocketServer = WebSocket.Server;
 
 const Connection = require("./Connection");
@@ -137,3 +137,4 @@ module.exports = Listener;
 
 const Router = require("./Router");
 const ServerHandle = require("../ServerHandle");
+

@@ -128,8 +128,8 @@ class Connection extends Router {
 
         const add = [], upd = [], eat = [], del = [];
         const player = this.player;
-        const     visible = player.visibleCells,
-              lastVisible = player.lastVisibleCells;
+        const      visible = player.visibleCells,
+               lastVisible = player.lastVisibleCells;
         for (let id in visible) {
             const cell = visible[id];
             if (!lastVisible.hasOwnProperty(id)) add.push(cell);
@@ -179,8 +179,8 @@ class Connection extends Router {
 
 module.exports = Connection;
 
+// تم التغيير من uws إلى ws ليتوافق مع Render
 const WebSocket = require("ws");
 const Listener = require("./Listener");
 const Minion = require("../bots/Minion");
 const Protocol = require("../protocols/Protocol");
-
